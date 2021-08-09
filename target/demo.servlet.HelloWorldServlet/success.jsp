@@ -2,14 +2,10 @@
 <h2>Hello World landing JSP!</h2>
 <body>
 <%
-String cookieName= null;
 String jSessionid= null;
 String token= null;
 Cookie[] cookies = request.getCookies();
 for(Cookie cookie: cookies){
-   if(cookie.getName().equals("current cookie")){
-      cookieName = cookie.getValue();
-   }
    if(cookie.getName().equals("JSESSIONID")){
       jSessionid = cookie.getValue();
    }
@@ -18,8 +14,12 @@ for(Cookie cookie: cookies){
     }
 }
 %>
-<%=cookieName%>
-<%=jSessionid%>
-<%=token%>
+<div>
+<span> JSessionID: </span>
+<span><%=jSessionid%> </span>
+</div>
+<span Token: </span>
+<span><%=token%></span>
+</div>
 </body>
 </html>

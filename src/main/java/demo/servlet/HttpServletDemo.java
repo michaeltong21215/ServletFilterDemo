@@ -22,9 +22,6 @@ public class HttpServletDemo extends HttpServlet {
             writer.print("<div>Http servlet demo printing...</div>");
             writer.print("</body></HTML>");
             logger.info("received the request.");
-            String token = JWTTokenUtil.generateToken();
-            Cookie cookie = new Cookie("token", token);
-            resp.addCookie(cookie);
             resp.sendRedirect("success.jsp");
         } catch (Exception e) {
             logger.info("error: " + e.getLocalizedMessage());

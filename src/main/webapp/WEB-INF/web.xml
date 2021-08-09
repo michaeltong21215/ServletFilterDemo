@@ -13,11 +13,32 @@
     <servlet-class>demo.servlet.GenericServletDemo</servlet-class>
   </servlet>
   <filter>
-    <display-name>
-      DemoFilter</display-name>
+    <display-name>DemoTwoFilter</display-name>
+    <filter-name>DemoTwoFilter</filter-name>
+    <filter-class>demo.servlet.DemoTwoFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>DemoTwoFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>DemoFilter</display-name>
     <filter-name>DemoFilter</filter-name>
     <filter-class>demo.servlet.DemoFilter</filter-class>
   </filter>
+  <filter-mapping>
+    <filter-name>DemoFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>DemoThreeFilter</display-name>
+    <filter-name>DemoThreeFilter</filter-name>
+    <filter-class>demo.servlet.DemoThreeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>DemoThreeFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 <!--  <servlet-mapping>
     <servlet-name>Demo Servlet</servlet-name>
     <url-pattern>/v1/demoservlet</url-pattern>
@@ -26,8 +47,5 @@
     <servlet-name>Generic Demo Servlet</servlet-name>
     <url-pattern>/v1/genericservlet</url-pattern>
   </servlet-mapping>-->
-  <filter-mapping>
-    <filter-name>DemoFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
+
 </web-app>
